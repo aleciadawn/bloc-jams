@@ -13,27 +13,34 @@ body {
   color: white;             /* sets our text color to white*/
   min-height: 100%          /* says the height of the body must be, at minimum, 100% of the window*/
 }
+
 .container {
     margin: 0 auto;
     max-width: 64rem;
 }
 
- /* Medium and small screens (640px) */
- @media (min-width: 640px) {
-   html { font-size: 112%; }
-   /* Style information will go here */
+.container {
+     margin: 0 auto;
+     max-width: 64rem;
  }
 
- /* Large screens (1024px) */
- @media (min-width: 1024px) {
-   html { font-size: 120%; }
-   /* Style information will go here */
- }
+/* Medium and small screens (640px) */
+@media (min-width: 640px) {
+  html { font-size: 112%; }
 
-     .column {
-         float: left;
-         padding-left: 1rem;
-         padding-right: 1rem;
+    .column {
+        float: left;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+ /* Style information will go here */
+}
+
+/* Large screens (1024px) */
+@media (min-width: 1024px) {
+  html { font-size: 120%; }
+ /* Style information will go here */
+}
 
      .column.full { width: 100%; }
      .column.two-thirds { width: 66.7%; }
@@ -42,3 +49,11 @@ body {
      .column.fourth { width: 25%; }
      .column.flow-opposite { float: right; }
      }
+
+     .clearfix::after {
+   content: ".";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
